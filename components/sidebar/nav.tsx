@@ -4,14 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export default function Sidebar() {
-  const navigation = [
-    { name: "profile.ts", href: "/about/profile" },
-    { name: "education.ts", href: "/about/education" },
-    { name: "work.ts", href: "/about/work" },
-  ];
+interface NavType {
+  name: string;
+  href: string;
+}
+
+export default function NavSidebar({ navMenu }: { navMenu: NavType[] }) {
   const pathname = usePathname();
-  return navigation.map((nav) => {
+  return navMenu.map((nav) => {
     const isActive =
       pathname === nav.href ||
       (pathname.startsWith(nav.href) && nav.href !== "/");

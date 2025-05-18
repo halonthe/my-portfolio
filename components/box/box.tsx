@@ -1,6 +1,11 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Header from "../headers/header";
+import {
+  IconBrandGit,
+  IconBrandLinkedinFilled,
+  IconBrandTwitterFilled,
+} from "@tabler/icons-react";
 
 const Box = ({
   children,
@@ -30,7 +35,35 @@ const Box = ({
       {/* content */}
       {children}
       {/* footer */}
-      <div className="flex items-center">footer</div>
+      <footer className="flex items-center justify-between">
+        <div className="flex gap-2 items-center">
+          find me |{" "}
+          <a
+            href="https://twitter.com/halonthe"
+            target="_blank"
+            className="flex items-center cursor-pointer hover:text-blue-700"
+          >
+            <IconBrandTwitterFilled className="w-4 h-4" />
+            @halonthe
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yudhadr/"
+            target="_blank"
+            className="flex items-center cursor-pointer hover:text-blue-700"
+          >
+            <IconBrandLinkedinFilled className="w-4 h-4" />
+            yudhadr
+          </a>
+        </div>
+        <a
+          href="https://github.com/halonthe"
+          target="_blank"
+          className="flex items-center hover:text-blue-700"
+        >
+          <IconBrandGit className="w-4 h-4" />
+          main*
+        </a>
+      </footer>
     </div>
   );
 };

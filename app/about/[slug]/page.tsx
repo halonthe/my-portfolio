@@ -1,9 +1,8 @@
 import { CodeBlock } from "@/components/ui/code-block";
-import Sidebar from "@/components/sidebar/sidebar";
 import { education, profile, work } from "@/contents/about";
-import { IconFolderFilled } from "@tabler/icons-react";
 import { notFound } from "next/navigation";
 import React from "react";
+import SideBar from "@/components/sidebar/sidebar";
 
 const ProfilePage = async ({
   params,
@@ -23,16 +22,15 @@ const ProfilePage = async ({
     notFound();
   }
 
+  const navMenu = [
+    { name: "profile.ts", href: "/about/profile" },
+    { name: "education.ts", href: "/about/education" },
+    { name: "work.ts", href: "/about/work" },
+  ];
   return (
     <div className="w-full h-full flex">
       {/* sidebar */}
-      <div className="w-[300px] h-full">
-        <div className="flex items-center gap-1">
-          <IconFolderFilled className="w-4 h-4" />
-          <p>about</p>
-        </div>
-        <Sidebar />
-      </div>
+      <SideBar page="about" navMenu={navMenu} />
       {/* codeblock */}
       <CodeBlock language="ts" filename="" code={code} />
     </div>
