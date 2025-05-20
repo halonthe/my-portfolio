@@ -8,11 +8,13 @@ export default async function Projects() {
       title: "CHILL",
       src: "/images/chill.png",
       desc: "Movie Streaming Platform",
+      href: "/projects/chill",
     },
     {
       title: "Better Day",
       src: "/images/better-day.png",
       desc: "Calendar with TO-DO app",
+      href: "/projects/better-day",
     },
   ];
   return (

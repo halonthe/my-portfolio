@@ -27,7 +27,7 @@ const Box = ({
 
   return (
     <div
-      className="bg-[#000E22]/30 backdrop-blur-lg shadow-2xl shadow-black/50 w-[1300px] h-[700px] rounded-2xl mx-10 px-5 z-10 flex flex-col text-[#607C97]"
+      className="bg-[#000E22]/30 backdrop-blur-lg border border-[#607C97]/20 shadow-2xl shadow-black/50 w-[1300px] h-[700px] rounded-2xl mx-10 px-5 z-10 flex flex-col text-[#607C97]"
       ref={boxRef}
     >
       {/* header */}

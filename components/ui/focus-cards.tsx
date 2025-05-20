@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Card = React.memo(
   ({
@@ -24,6 +25,7 @@ export const Card = React.memo(
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
+      <Link href={card.href}>
       {/* <img
         src={card.src}
         alt={card.title}
@@ -47,6 +49,7 @@ export const Card = React.memo(
           <p className="text-base font-medium">{card.desc}</p>
         </div>
       </div>
+      </Link>
     </div>
   )
 );
@@ -57,6 +60,7 @@ type Card = {
   title: string;
   src: string;
   desc: string;
+  href: string;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {

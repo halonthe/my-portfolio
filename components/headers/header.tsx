@@ -10,7 +10,7 @@ type HeaderProps = {
 const Header = ({ maximize }: HeaderProps) => {
   const navigation = [
     { name: "hello", href: "/" },
-    { name: "about", href: "/about" },
+    { name: "about", href: "/about/profile" },
     { name: "projects", href: "/projects" },
     { name: "articles", href: "/articles" },
     { name: "contact", href: "/contact" },

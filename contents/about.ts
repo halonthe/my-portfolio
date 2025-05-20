@@ -40,8 +40,7 @@ export const education = `const education = [
         'PHP',
         'HTML',
         'CSS'],
-        startDate: undefined, // forgot the exact date, but it was 2010
-        endDate: '2014-04-01'
+        graduate: '2014-08-01',
     },
 ]
 
@@ -55,5 +54,4 @@ const courses = [
         endDate: undefined, // still courses
     },
 ];
-
 `;
